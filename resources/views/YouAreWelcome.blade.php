@@ -14,7 +14,7 @@
 
     @foreach($mes as $m)
 
-        <div class="card border-secondary text-dark m-2 w-100 shadow" style="min-width: 20rem;max-width: 30rem">
+        <div class="card border-secondary text-dark m-2 w-100 shadow-lg" style="min-width: 20rem;max-width: 30rem">
             <div class="card-header">{{$m->email}}</div><div class="">{{$m->time_create}}</div>
             <div class="card-body">
                 <p class="card-text">{{$m->message}}</p>
@@ -24,18 +24,8 @@
     @endforeach
 
             @else
-            <div class="border-danger text-dark mt-2 h3"><span>No messages yet</span></div>
+            <div class="text-dark mt-2 h3"><span>No messages yet</span></div>
             @endif
 
     </div>
-@endsection
-
-@section('script')
-    <script>
-        document.ready(function(){
-            $('.order-0').click(function(){
-                console.log("hi");
-            })
-        })
-    </script>
 @endsection
